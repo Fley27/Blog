@@ -1,0 +1,93 @@
+.container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.btn,
+.category{
+    width: 90px;
+    height: 30px;
+    background-color: #000;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: .7em;
+    margin-right: 30px;
+}
+
+.item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(87, 87, 87);
+    letter-spacing: 1px;
+    font-size: .8em;
+}
+
+.date span{
+    color: rgb(21, 21, 21);
+}
+
+.date{
+    margin-right: 25px;
+}
+
+.comment{
+    display: flex;
+    flex-direction: row;
+}
+
+.comment span{
+    font-size: 10px;
+    margin: auto 0;
+    margin-right: 14px;
+    color:rgb(21, 21, 21);;
+}
+
+.body{
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    font-size: 1.3em;
+    font-weight: bold;
+    line-height: 45px;
+    margin-bottom: 20px;
+}
+
+.description{
+    color: rgb(119, 119, 119);
+    line-height: 30px;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+}
+
+.btn{
+    border: 1px solid rgb(233, 233, 233);
+    background: rgb(249, 249, 255);
+    padding: 0px 28px;
+    border-radius: 5px;
+    line-height: 38px;
+    color: rgb(0, 0, 0);
+    width: 140px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    color: #fff;
+    background-color: rgb(21, 21, 21);
+}

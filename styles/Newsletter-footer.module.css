@@ -1,0 +1,10 @@
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: .1em;
+}
+
+.description{
+    color: #777;
+}

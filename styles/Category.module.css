@@ -1,0 +1,25 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    letter-spacing: .1em;
+    color: #777;
+    font-size: 1.1em;
+    border-bottom: 2px dotted #eee;
+    cursor: pointer;
+}
+
+.container:hover{
+    color: purple;
+    border-color: rebeccapurple;
+}
+
+@media (max-width: 1325px) {
+    .container{
+        font-size: .85em;
+        height: 50px;
+    }
+}
