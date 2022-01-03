@@ -1,8 +1,7 @@
 import Image from 'next/image'
-import img from "../../../images/1.jpeg"
 import styles from "../../../styles/Popular.module.css"
 
-const Post = ({title, posted}) => (
+const Post = ({title, posted, img}) => (
     <div className = {styles.container}>
         <div className = {styles.post_image}>
             <Image

@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import img from "../../images/1.jpeg"
+import img from "../../images/premium.jpeg"
 import CardText from './card-text'
 import styles from "../../styles/Premier.module.css"
 

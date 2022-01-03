@@ -9,7 +9,7 @@
 }
 
 .image{
-    height: 350px;
+    height: 400px;
     width: 100%;
     position: relative;
 }
@@ -19,7 +19,7 @@
     margin: 0 auto;
     min-height: 300px;
     background-color: #fff;
-    box-shadow: 0 10px 50px 0 rgba(173, 171, 171, 0.091);
+    box-shadow: 0 15px 15px 0 rgba(173, 171, 171, 0.235);
     padding: 50px 25px 40px 25px;
     position: relative;
     z-index: 3;

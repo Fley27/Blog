@@ -8,6 +8,14 @@ body {
   
 }
 
+#container{
+  height: 300px;
+  z-index: 2;
+  background-color: cornsilk;
+  padding: 40px 30px;
+  border-radius: 5px;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -15,4 +23,23 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(177, 115, 115); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(233, 110, 110); 
 }

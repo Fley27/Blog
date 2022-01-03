@@ -2,7 +2,7 @@
     width: 100vw;
     display: flex;
     flex-direction: column;
-    height: 160px;
+    height: fit-content
 }
 
 @media (max-width: 800px) {

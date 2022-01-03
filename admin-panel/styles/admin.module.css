@@ -1,0 +1,27 @@
+.container,
+.main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.pageWrapper ,
+.pageWrapper_ {
+    display: flex;
+    height: calc(100% - 60px);
+    height: 100%;
+    transition: width .4s linear;
+}
+
+.pageWrapper {
+    width: calc(100% - 200px);
+    position: relative;
+    left: 200px;
+}
+
+.pageWrapper_ {
+    width: calc(100% - 60px);
+    position: relative;
+    left: 60px;
+}

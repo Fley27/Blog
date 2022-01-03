@@ -7,7 +7,7 @@ const Header = () => (
     <div className = {styles.container}>
         <Nav/>
         <Title 
-            title =  "Soli-Écriture"
+            title =  "Solipresse"
             category = "Home"
         />
         <NavMobile 

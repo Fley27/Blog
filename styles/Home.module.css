@@ -1,8 +1,9 @@
 .container {
   font-family: 'Inconsolata', monospace;
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   background: #fcfcfc;
+  overflow: hidden;
 }
 
 .main {

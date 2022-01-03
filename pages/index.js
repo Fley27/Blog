@@ -7,12 +7,21 @@ import Right from '../components/sidebar/right'
 import Pagination from '../components/post/pagination/pagination'
 import Footer from '../components/footer/footer'
 import styles from '../styles/Home.module.css'
+import blackWoman from "../images/black-woman-modelo.jpeg"
+import whiteWoman from "../images/white-woman.jpeg"
+import singleFather from  "../images/single-father.jpeg"
+import blindMan from "../images/blind-man.jpeg"
+import fashion from "../images/fashion.jpeg"
+import youngWoman from "../images/young-woman.jpeg"
+import newGenarationOfDeveloper from "../images/new-generation-of-dev.jpeg"
+import stayNoToRacism from "../images/stay-no-to-racism.jpeg"
+
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Soli-Écriture</title>
+        <title>Solipresse</title>
         <meta name="description" content="Soli-Ecriture || On met le monde à nue grâce à l'écriture." />
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"></link>
@@ -27,31 +36,47 @@ export default function Home() {
         <div className = {styles.body}>
           <div className = {styles.blog}>
             <div className = {styles.most_rated}>
-              <Card/>
+              <Card
+                img = {blackWoman}              
+              />
             </div>
             <div className = {styles.articles}>
               <div className = {styles.article}>
-                <CardMobile/>
+                <CardMobile
+                  img = {singleFather}
+                />
               </div>
               <div className = {styles.article}>
-                <CardMobile/>
+                <CardMobile
+                  img = {blindMan}
+                />
               </div>
             </div>
             <div className = {styles.most_rated}>
-              <Card/>
+              <Card
+                img  = {whiteWoman}
+              />
             </div>
             <div className = {styles.articles}>
               <div className = {styles.article}>
-                <CardMobile/>
+                <CardMobile
+                  img = {fashion}
+                />
               </div>
               <div className = {styles.article}>
-                <CardMobile/>
+                <CardMobile
+                  img = {youngWoman}
+                />
               </div>
               <div className = {styles.article}>
-                <CardMobile/>
+                <CardMobile
+                  img = {newGenarationOfDeveloper}  
+                />
               </div>
               <div className = {styles.article}>
-                <CardMobile/>
+                <CardMobile
+                  img = {stayNoToRacism}
+                />
               </div>
             </div>
             <Pagination/>

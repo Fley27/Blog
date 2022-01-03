@@ -1,9 +1,8 @@
 import Image from 'next/image'
-import img from "../../images/1.jpeg"
 import CardText from './card-text-most-rated'
 import styles from "../../styles/Card.module.css"
 
-const Card = () => (
+const Card = ({img}) => (
     <div className = {styles.container}>
         <div className = {styles.image}>
             <Image

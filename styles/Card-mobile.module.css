@@ -1,14 +1,16 @@
 .container{
     width: 100%;
-    height: fit-content;
+    min-height: 490px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    box-sizing: border-box;
 }
 
 .image{
-    height: 200px;
+    height: 250px;
     width: 100%;
     position: relative;
 }
@@ -18,10 +20,10 @@
     width: 90%;
     min-height: 250px;
     background-color: #fff;
-    box-shadow: 0 10px 50px 0 rgba(173, 171, 171, 0.091);
+    box-shadow: 0 15px 15px 0 rgba(173, 171, 171, 0.235);
     padding: 50px 25px 40px 25px;
     position: relative;
-    z-index: 1;
+    z-index: 4; 
     margin-top: -100px;
 }
 
