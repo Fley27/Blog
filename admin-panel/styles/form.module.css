@@ -66,7 +66,6 @@
 }
 
 .form select{
-    min-height: 60px;
     width: 100%;
 }
 
@@ -92,7 +91,6 @@
 
 .form select:after {
     justify-self: end;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .form select:focus{
@@ -107,7 +105,7 @@
 
 .error_input,
 .error_password{
-    background-color: rgb(255, 246, 246);
+    background-color: rgb(219, 170, 170);
 }
 
 .input:focus,
@@ -223,4 +221,43 @@
     letter-spacing: 1px;
     margin: 0 auto;
     cursor: pointer;
+}
+
+
+.input_over,
+.input_over:focus{
+    background: rgba(235, 153, 153, 0.55);
+}
+
+.row_container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.roww{
+    display: flex;
+    justify-content: space-between;
+}
+
+.date{
+    width: 55%;
+}
+
+.time{
+    width: 35%;
+}
+
+.date > .item{
+    width: 30%;
+}
+
+.time > .item{
+    width: 45%;
+}
+
+.error_input,
+.error_input:focus{
+    background: rgb(219, 170, 170);
 }

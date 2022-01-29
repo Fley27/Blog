@@ -2,17 +2,26 @@ import React, { useRef, useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from "prop-types";
 import { Editor } from '@tinymce/tinymce-react';
-import { newPost } from '../../../redux/actions/post';
+import { newArticle } from '../../../redux/actions/post';
 import styles from "../../styles/modal.module.css";
 
-function App({state, setState, pagination, handlePagination, newPost, ...props}) {
+function App({state, setState, pagination, handlePagination, newArticle, ...props}) {
     const editorRef = useRef(null);
 
     useEffect(() => {
-        if(props.post.post){
-           console.log("OK")
+        if(props.post.article){
+            setState({
+                title: "",
+                description: "",
+                image: null,
+                content: null,
+                category: [],
+                tags: []
+            })
+            handlePagination(0)
         }
-    }, [props.post])
+    }, [props.post]);
+
     const submit = () => {
         if (editorRef.current) {
             setState(prevState=>({...prevState, content: editorRef.current.getContent()}));
@@ -21,10 +30,10 @@ function App({state, setState, pagination, handlePagination, newPost, ...props})
             formData.append('title', title);
             formData.append('description', description);
             formData.append('image', image);
-            formData.append('content', content);
+            formData.append('content', editorRef.current.getContent());
             formData.append('category', JSON.stringify(category));
             formData.append('tags', JSON.stringify(tags));
-            newPost(formData)
+            newArticle(formData, props.auth.token);
         }
     };
 
@@ -94,7 +103,7 @@ function App({state, setState, pagination, handlePagination, newPost, ...props})
 App.propTypes = {
     auth: PropTypes.object.isRequired,
     post: PropTypes.object.isRequired,
-    newPost: PropTypes.func.isRequired,
+    newArticle: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
@@ -103,4 +112,4 @@ const mapStateToProps = (state) => ({
 });
 
 
-export default connect(mapStateToProps, {newPost})(App);
+export default connect(mapStateToProps, {newArticle})(App);

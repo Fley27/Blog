@@ -1,0 +1,114 @@
+.container{ 
+    width: 100%;
+    height: fit-content;
+    margin: 20px 0;
+    align-items: center;
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-radius: 8px;
+}
+
+.header{
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 40px 0 20px ;
+    border-bottom: 2px solid rgb(245, 244, 244);
+}
+
+.title,
+.number{
+    width: 100%;
+    text-align: left;
+    margin: 0 40px;
+}
+
+.title{
+    font-size: 20px;
+    font-weight: 700px;
+    margin-bottom: 7px;
+    color: gray;
+}
+
+.number{
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(16, 185, 129);;
+}
+
+.number > span{
+    font-weight: 200;
+    font-size: 25px;
+}
+
+.footer{
+    width: 100%;
+    border-top: 2px solid rgb(243, 243, 243);
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.label > span{
+    margin-left: 10px;
+}
+
+.label{
+    margin-left: 40px;
+    color: rgb(80, 72, 229);
+    cursor: pointer;
+}
+
+.body{
+    width: 100%;
+    height: fit-content;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: center;
+}
+.item{
+    width:  100%;
+    margin: 20px 0;
+}
+
+.legend{
+    font-size: 18px;
+    font-weight: 700px;
+    margin-bottom: 10px;
+    color: gray;
+}
+
+.data{
+    color: rgba(255, 90, 90, 0.762);
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    height: fit-content;
+    align-items: center;
+}
+
+.data > span,
+.comment > span{
+    align-self: center;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.data > span{
+    color: rgb(255, 90, 90);
+}
+
+.comment{
+    color:rgba(20, 107, 221, 0.829);
+}
+
+.comment > span{
+    color: rgb(20, 107, 221);
+}

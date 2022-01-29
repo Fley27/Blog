@@ -1,0 +1,27 @@
+.container{
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 40px 0 20px ;
+    border-bottom: 2px solid rgb(245, 244, 244);
+}
+
+.title,
+.period{
+    width: 100%;
+    text-align: left;
+    margin: 0 40px;
+}
+
+.title{
+    font-size: 24px;
+    font-weight: 900px;
+    margin-bottom: 7px;
+}
+
+.period{
+    color: gray;
+}

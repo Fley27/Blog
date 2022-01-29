@@ -4,6 +4,7 @@ import { store, persistor } from '../redux/store';
 import Alert from '../components/notifications/alert';
 import MainLayout from '../admin-panel/layouts/main';
 import DefaultLayout from '../admin-panel/layouts/default';
+import 'react-circular-progressbar/dist/styles.css';
 import '../styles/globals.css'
 import "../styles/Nav-mobile.css"
 import "../styles/alert.css";

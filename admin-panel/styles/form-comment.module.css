@@ -1,0 +1,75 @@
+.container,
+.form{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    height: fit-content;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container_{
+    margin: 20px 0;
+}
+
+.item{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    height: fit-content;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: 10px;
+    overflow: hidden ;
+}
+
+.col{
+    width: calc(100% - 70px);
+}
+
+.image,
+.image_{
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+    align-self: center;
+}
+
+.image_{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+}
+
+.input,
+.error_input{
+    border: 0px;
+    background-color: rgb(223, 223, 223);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+    letter-spacing: 1.4px;
+    font-family: 'Montserrat', sans-serif;
+    margin-right: auto;
+    min-height: 40px;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    align-self: center;
+}
+
+
+.error{
+    color: rgb(227, 36, 36);
+    font-size: 10px;
+    margin: 8px;
+    height: 13px;
+}
+
+.input:focus,
+.error_input:focus,
+.error_password:focus{
+    outline: 0;
+    background-color: rgb(199, 199, 199);
+}

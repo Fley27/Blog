@@ -14,11 +14,6 @@ const Attachment = ({state, setState, pagination, handlePagination}) => {
         category: ""
     })
     
-    const handleChange = (e) =>{
-        const {name, value} = e.target;
-        setState(prevState=>({...prevState, [name]: value}))
-    }
-
     const handleTagsChange = (e) => {
         console.log(e)
         const array = [];
@@ -74,7 +69,7 @@ const Attachment = ({state, setState, pagination, handlePagination}) => {
     const handleNext = () => {
         const result = formValidation();
         if(result)
-            handlePagination(2)
+            handlePagination(2);
     }
 
     const handleClickFile = () => {
@@ -109,7 +104,7 @@ const Attachment = ({state, setState, pagination, handlePagination}) => {
                         />
                     </div>
                     <div className = {styles.col}>
-                        <div className = {styles.label}>Attachments</div>
+                        <div className = {styles.label}>Post Cover</div>
                         <div className = {styles.error}>{error.image}</div>
                         <div onClick = {handleClickFile} className = {styles.image_upload_wrap}>
                             <div className = {styles.drag_text}>

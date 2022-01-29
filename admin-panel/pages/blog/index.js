@@ -1,10 +1,12 @@
 import Blog from "../../components/blog";
 import styles from "../../styles/blog.module.css"
 
-const Blog_ = () => (
-    <div className = {styles.container}>
-        <Blog/>
+const BlogPage = ({id}) => (
+    <div className = {styles.container}> 
+        <Blog
+            id = {id}
+        />
     </div>
 )
 
-export default Blog_;
+export default BlogPage;

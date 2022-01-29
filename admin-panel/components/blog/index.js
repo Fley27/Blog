@@ -1,52 +1,14 @@
 import React, {useState} from "react";
+import { connect } from 'react-redux';
+import PropTypes from "prop-types";
 import Head from "next/head";
-import BlogPost from "./post/post";
-import Modal from "./post/modal";
+import Modal from "./post/modal"; 
 import Add from "./post/add";
-import img from "../../../images/black-woman.jpeg"
-import img2 from "../../../images/art.jpeg"
-import img3 from "../../../images/car.jpeg"
+import InfiniteList from "../infiniteList";
+import { fetchArticles } from "../../../redux/actions/post";
 import styles from "../../styles/blog.module.css";
 
-const Blog = () => {
-    const [array, setArray] = useState([
-        {
-            title : "Why black woman is the most beautiful in the world.",
-            description: "Xavi Hernández ha fichado a Dani Alves por el carácter que el brasileño puede aportar al equipo, tanto a los jóvenes como a los veteranos.",
-            category: "Mode",
-            img: img
-        },
-        {
-            title : "Art, a passion that the entire world share together.",
-            description: "Xavi Hernández ha fichado a Dani Alves por el carácter que el brasileño puede aportar al equipo, tanto a los jóvenes como a los veteranos.",
-            category: "Société",
-            img: img2
-        },
-        {
-            title : "Super Car",
-            description: "Xavi Hernández ha fichado a Dani Alves por el carácter que el brasileño puede aportar al equipo, tanto a los jóvenes como a los veteranos.",
-            category: "Lifetyle",
-            img: img3
-        },
-        {
-            title : "Why black woman is the most beautiful in the world.",
-            description: "Xavi Hernández ha fichado a Dani Alves por el carácter que el brasileño puede aportar al equipo, tanto a los jóvenes como a los veteranos.",
-            category: "Féminisme",
-            img: img
-        },
-        {
-            title : "Art, a passion that the entire world share together.",
-            description: "Xavi Hernández ha fichado a Dani Alves por el carácter que el brasileño puede aportar al equipo, tanto a los jóvenes como a los veteranos.",
-            category: "Sexualité",
-            img: img2
-        },
-        {
-            title : "Super Car",
-            description: "Xavi Hernández ha fichado a Dani Alves por el carácter que el brasileño puede aportar al equipo, tanto a los jóvenes como a los veteranos.",
-            category: "Technologie",
-            img: img3
-        },
-    ]);
+const Blog = (props) => {
 
     const [state, setState] = useState({
         title: "",
@@ -59,9 +21,10 @@ const Blog = () => {
 
     const [toggle, setToggle] = useState(false);
 
-    const [pagination, setPagination] =  useState(0);
+    const [pagination, setPagination] =  useState();
 
     const handlePagination = (index) => {
+        alert(index)
         setPagination(index)
     }
 
@@ -89,21 +52,15 @@ const Blog = () => {
                     />
                 ): null
             }
-            <div className = {styles.posts}>
-                
-                {
-                    array.map((item, idx)=>
-                        <div key = {idx} className = {styles.blog_post}>
-                            <BlogPost
-                                title = {item.title}
-                                description = {item.description}
-                                img = {item.img}
-                                category = {item.category}
-                            />
-                        </div>
-                    )
-                }
-            </div>
+            {
+                props.id >= 0 ? (
+                    <InfiniteList 
+                        fetchArticles = {props.fetchArticles}
+                        token = {props.auth.token}
+                        page = {props.id}
+                    />
+                ):null
+            }
             {
                 toggle ? (
                     <Modal
@@ -123,4 +80,16 @@ const Blog = () => {
 }
 
 
-export default Blog;
+Blog.propTypes = {
+    auth: PropTypes.object.isRequired,
+    post: PropTypes.object.isRequired,
+    fetchArticles: PropTypes.func.isRequired,
+};
+
+const mapStateToProps = (state) => ({
+    auth: state.auth,
+    post: state.post
+});
+
+
+export default connect(mapStateToProps, {fetchArticles})(Blog);

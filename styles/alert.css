@@ -57,15 +57,15 @@
 }
 
 .success{
-    background: rgb(0, 45, 31);
-    background: linear-gradient(90deg, rgb(0, 45, 31) 0%, rgba(92, 91, 91, 0.345) 25%, rgba(255, 255, 255, 0.214) 100%);
+    background: rgb(8, 205, 142);
+    background: linear-gradient(90deg, rgb(15, 228, 161) 0%, rgba(92, 91, 91, 0.345) 50%, rgba(255, 255, 255, 0.214) 100%);
     min-height: 50px;
     border-radius: 5px;
 }
 
 .error{
     background: rgb(194, 55, 55);
-    background: linear-gradient(90deg, rgb(194, 55, 55) 0%, rgba(92, 91, 91, 0.345) 25%, rgba(255, 255, 255, 0.214) 100%);
+    background: linear-gradient(90deg, rgb(194, 55, 55) 0%, rgba(92, 91, 91, 0.345) 50%, rgba(255, 255, 255, 0.214) 100%);
     color: #fff;
     min-height: 50px;
     border-radius: 5px;

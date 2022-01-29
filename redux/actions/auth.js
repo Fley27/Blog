@@ -37,7 +37,7 @@ export const signUp = (userData) => async (dispatch) => {
             type: SIGN_UP_FAIL
         })
         console.log(JSON.stringify(error.response))
-        dispatch(setAlert(`Can't sign up`, error.response.data.message , `error`))
+        dispatch(setAlert(`Can't sign up`, error.response.data.msg , `error`))
     }
 }
 
@@ -65,7 +65,7 @@ export const signIn = (userData) => async (dispatch) => {
             type: SIGN_IN_FAIL
         })
         alert(JSON.stringify(error.response.data))
-        dispatch(setAlert(`Can't sign in`, error.response.data.message , `error`))
+        dispatch(setAlert(`Can't sign in`, error.response.data.msg , `error`))
         
     }
 }

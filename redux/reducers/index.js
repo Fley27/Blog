@@ -4,6 +4,8 @@ import storage from 'redux-persist/lib/storage'
 import alert from "./alert";
 import auth from "./auth";
 import post from "./post"
+import comment from "./comment"
+import like from "./like"
 
 
 const persistConfig = {
@@ -15,7 +17,9 @@ const persistConfig = {
 const rootReducer =  combineReducers({
     alert,
     auth,
-    post
+    post,
+    comment,
+    like
 });
 
 export default persistReducer(persistConfig, rootReducer)

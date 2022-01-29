@@ -1,5 +1,4 @@
-.container,
-.container_{
+.container{
     position: fixed;
     width: 200px;
     height: calc(100% - 60px);
@@ -19,8 +18,7 @@
     top: 60px;
 }
 
-.container a,
-.container_ a{
+.container a{
     text-decoration: none;
     display: flex;
     flex-direction: column;
@@ -29,7 +27,7 @@
     align-items: center;
 }
 
-.container_{
+.hidden{
     width: 60px;
     transition: all linear .4s;
 }
@@ -93,27 +91,13 @@
     font-weight: 600;
 }
 
+.drafts i {
+    font-weight: 400;
+}
+
 .left,
 .right{
     margin: 0 2px;
-}
-
-.square{
-    width: 12px;
-    height: 10px;
-    background: #b0b2b3;
-    margin: 3px 0;
-}
-
-.right .square:nth-child(1),
-.left .square:nth-child(2){
-    height: 13px;
-    border-top-right-radius: 2px;
-}
-
-.right .square:nth-child(2),
-.left .square:nth-child(1){
-    border-bottom-left-radius: 2px;
 }
 
 .label{
@@ -142,6 +126,6 @@
 
 }
 
-.container_ .label{
+.hidden .label{
     display: none;
 }

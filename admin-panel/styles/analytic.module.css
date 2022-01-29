@@ -1,0 +1,42 @@
+.container{
+    width: 100%;
+    height: 100%;
+    padding: 80px;
+    padding-bottom: 20px;
+    overflow: hidden;
+    font-family: 'Inconsolata', monospace;
+    background-color: #ffffff;
+}
+
+.row{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.row_item{
+    width: 23%;
+    height: fit-content;
+}
+
+.transaction{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.transaction_item{
+    width: 40%;
+    height: fit-content;
+}
+
+.chart{
+    width: 58%;
+}

@@ -17,8 +17,16 @@
 
 .arrow i{
     font-weight: 300;
-    font-size: 1.3em;
+    font-size: 1.2em;
     cursor: pointer;
+}
+
+.double i{
+    font-size: 1em;
+}
+
+.double{
+    margin: 0 5px;
 }
 
 .pagination{
@@ -27,6 +35,8 @@
     margin: 0 20px;
     height: fit-content;
     height: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .item,
@@ -38,6 +48,12 @@
     height: 100%;
     font-weight: 600;
     cursor: pointer;
+    text-decoration: none;
+}
+
+.dot{
+    height: fit-content;
+    margin: -7px 0 0 0;
 }
 
 .selected{
