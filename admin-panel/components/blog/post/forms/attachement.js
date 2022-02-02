@@ -86,7 +86,7 @@ const Attachment = ({state, setState, pagination, handlePagination}) => {
                 <input id="my-file" type="file" name="my-file" style={{ display: "none" }} accept = "image/*" />
                 <>
                     <div className = {styles.col}>
-                        <div className = {styles.label}>Category</div>
+                        <div className = {styles.label}>Post category</div>
                         <div className = {styles.error}>{error.category}</div>
                         <MultiSelect
                             handleChange = {handleCategoryChange}
@@ -95,7 +95,7 @@ const Attachment = ({state, setState, pagination, handlePagination}) => {
                         />
                     </div>
                     <div className = {styles.col}>
-                        <div className = {styles.label}>Tags</div>
+                        <div className = {styles.label}>Post tags</div>
                         <div className = {styles.error}>{error.tags}</div>
                         <MultiSelect
                             handleChange = {handleTagsChange}

@@ -1,0 +1,168 @@
+.container{
+    width: 80%;
+    height: 100%;
+    padding: 120px 5px ;
+    padding-bottom: 80px;
+    overflow: hidden;
+    font-family: 'Inconsolata', monospace;
+    background-color: #ffffff;
+    margin: 0 auto;
+}
+
+.btn{
+    margin: 30px 0;
+    display: block;
+    font-size: 20px;
+}
+
+.btn > span{
+    margin-right: 15px;
+}
+
+.btn > span > i{
+    font-weight: 300;
+}
+
+.btn:hover{
+    color: rgb(80, 72, 229);
+    border-width: 2px;
+}
+
+.header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: fit-content;
+}
+
+.avatar{
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    align-items: center;
+}
+
+.profile{
+    width: fit-content;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-self: start;
+    margin: auto 0;
+}
+
+.avatar{
+    margin-right: 20px;
+}
+
+.image{
+    position: relative;
+    height: 60px;
+    width: 60px;
+    margin: auto 0;
+    box-sizing: border-box;
+    border-radius: 60px;
+    overflow: hidden;
+}
+
+.name{
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dispalyName{
+    line-height: 1.2;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.username{
+    color: rgb(109, 108, 108);
+    font-size: 16px;
+}
+
+
+.buttons{
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    align-items: center;
+}
+
+.button{
+    width: fit-content;
+    height: 42px;
+    padding: 0 20px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button > span{
+    margin-left: 10px;
+}
+
+.button > span > i{
+    font-weight: 300;
+}
+
+.mauvre{
+    border-color: rgb(80, 72, 229);
+    color: rgb(80, 72, 229);
+}
+
+.mauvre:hover{
+    background-color: rgb(246, 246, 255);
+}
+
+.green{
+    border-color: rgb(16, 185, 129);
+    color: rgb(16, 185, 129);
+}
+
+.green:hover{
+    background-color: rgb(241, 255, 250);
+}
+
+.red{
+    border-color:rgb(255, 90, 90);
+    color: rgb(255, 90, 90);
+}
+
+.red:hover{
+    background-color: rgb(255, 246, 246);
+}
+
+.tab{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding-top: 20px;
+    border-bottom: 1px solid rgb(233, 232, 232);
+    height: fit-content;
+    margin: 30px 0;
+}
+
+.item{
+    margin-right: 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: gray;
+    height: 40px
+}
+
+.selected{
+    color: rgb(80, 72, 229);
+    border-bottom: 2px solid rgb(80, 72, 229) ;
+}

@@ -75,6 +75,10 @@
     margin: auto 0;
 }
 
+.avatar{
+    margin-right: 20px;
+}
+
 .image{
     position: relative;
     height: 40px;
@@ -106,8 +110,25 @@
     justify-content: start;
     align-items: center;
     font-size: 18px;
-    color: gray;
+    color: rgb(21, 20, 20);
     font-weight: 300;
+}
+
+.action > span{
+    margin-right: 10px;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    color: rgb(113, 113, 113);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.action > span:hover{
+    background-color: rgb(240, 240, 240) ;
 }
 
 .footer{

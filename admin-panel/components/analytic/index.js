@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Activity from '../cards/activity';
 import BoxAnalytic from "./box"
 import Header from '../general/header';
 import LineChart from "../chart/line";

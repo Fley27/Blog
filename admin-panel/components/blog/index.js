@@ -5,6 +5,7 @@ import Head from "next/head";
 import Modal from "./post/modal"; 
 import Add from "./post/add";
 import InfiniteList from "../infiniteList";
+import { PostSearch } from "../search/post";
 import { fetchArticles } from "../../../redux/actions/post";
 import styles from "../../styles/blog.module.css";
 
@@ -24,7 +25,6 @@ const Blog = (props) => {
     const [pagination, setPagination] =  useState();
 
     const handlePagination = (index) => {
-        alert(index)
         setPagination(index)
     }
 
@@ -52,6 +52,7 @@ const Blog = (props) => {
                     />
                 ): null
             }
+            <PostSearch/>
             {
                 props.id >= 0 ? (
                     <InfiniteList 

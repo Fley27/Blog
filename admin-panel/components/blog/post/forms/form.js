@@ -72,13 +72,13 @@ const Form = ({state, setState, pagination, handlePagination}) => {
         <div className = {styles.container}>
             <form className = {styles.form}>
                 <div className = {`${styles.col}`}>
-                    <div className = {styles.label}>Title</div>
+                    <div className = {styles.label}>Post title</div>
                     <div className = {styles.error}>{error.title}</div>
                     <textarea 
                         onKeyPress = {handleTitleKeyPress} 
                         onChange = {handleChange} 
                         ref = {title}  
-                        placeholder = "Lorem Ipsum ipsum lenguae" 
+                        placeholder = "" 
                         className = {`${styles.input}  ${error.title ? styles.error_input : ``} ${state.title.length >= 71 ? styles.input_over : ``}`} 
                         name = "title" 
                         rows = "2"
@@ -96,7 +96,7 @@ const Form = ({state, setState, pagination, handlePagination}) => {
                                     // pathTransition: 'none',
                                 
                                     // Colors
-                                    pathColor: `${state.title.length >= 60 ? "#ff2828" : "#287fff"}`,
+                                    pathColor: `${state.title.length >= 60 && state.title.length <= 70 ? "rgb(245, 147, 0)" : state.title.length > 70 ? "#ff2828" : '#3e98c7'}`,
                                     textColor: '#ff2828',
                                     trailColor: '#9cbcec',
                                     backgroundColor: '#3e98c7',
@@ -106,13 +106,13 @@ const Form = ({state, setState, pagination, handlePagination}) => {
                     </div>
                 </div>
                 <div className = {styles.col}>
-                    <div className = {styles.label}>Description</div>
+                    <div className = {styles.label}>Short description</div>
                     <div className = {styles.error}>{error.description}</div>
                     <textarea 
                         onKeyPress = {handleDescriptionKeyPress} 
                         onChange = {handleChange} 
                         ref = {description}  
-                        placeholder = "Describe your issue with respect. Do not offense other people." 
+                        placeholder = "" 
                         className = {`${styles.input}  ${error.description ? styles.error_input : ``} ${state.description.length >= 121 ? styles.input_over : ``}`} 
                         name = "description" 
                         rows = "4"
@@ -120,7 +120,7 @@ const Form = ({state, setState, pagination, handlePagination}) => {
                     />
                     <div style={{ position: "relative", left: "97%", top: -60, width: 20, height: 20 }}>
                         <CircularProgressbar 
-                            value={state.description.length / 1.83333333333} 
+                            value={state.description.length / 1.2} 
                             styles={
                                 buildStyles({
                                     // How long animation takes to go from one percentage to another, in seconds
@@ -130,7 +130,7 @@ const Form = ({state, setState, pagination, handlePagination}) => {
                                     // pathTransition: 'none',
                                 
                                     // Colors
-                                    pathColor: `${state.description.length >= 110 ? "#ff2828" : "#287fff"}`,
+                                    pathColor: `${state.description.length >= 110 && state.description.length <= 120 ? "rgb(245, 147, 0)" : state.description.length > 120 ? "#ff2828" : '#3e98c7'}`,
                                     textColor: '#ff2828',
                                     trailColor: '#9cbcec',
                                     backgroundColor: '#3e98c7',

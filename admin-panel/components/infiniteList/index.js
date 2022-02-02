@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useLayoutEffect } from "react";
 import axios from "axios";
 import { link } from "../../../redux/consts";
 import BlogPost from "../blog/post/post";
@@ -49,7 +49,7 @@ function InfiniteList({ page, token}) {
     const [numberTotalOfPage, setNumbreTotalOfPage] =  useState(0);
     const [nextPage, setNextPage] = useState(1);
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         handleLoadMore(parseInt(page));
     }, [page])
 
@@ -102,3 +102,5 @@ InfiniteList.propTypes = {
 };
 
 export default InfiniteList;
+
+// 300 185 5572
