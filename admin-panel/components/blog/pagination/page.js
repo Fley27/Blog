@@ -136,7 +136,7 @@ function PaginationList({ page, token, toggle, state, search, setState, setSearc
                         <BlogPost
                             title = {item.title}
                             description = {item.description}
-                            img = {`http://localhost:4000/${item.image_docs.path}`}
+                            img = {`https://solipresse.herokuapp.com/${item.image_docs.path}`}
                             category = {item.category[0]}
                             id = {item._id}
                             link = {`/admin/${isAvailable ? "blog": "drafts"}/${item._id}`}

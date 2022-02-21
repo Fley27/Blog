@@ -139,7 +139,7 @@ function WindowPagination({ token, toggle, state, search, setState, setSearch, i
                         <BlogPost
                             title = {item.title}
                             description = {item.description}
-                            img = {`http://localhost:4000/${item.image_docs.path}`}
+                            img = {`https://solipresse.herokuapp.com/${item.image_docs.path}`}
                             category = {item.category[0]}
                             id = {item._id}
                             link = {`/admin/blog/${item._id}`}

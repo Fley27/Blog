@@ -1,6 +1,6 @@
-export const link = "http://localhost:4000/api";
+export const link = "https://solipresse.herokuapp.com/api";
 
-export const linkSocket = "http://localhost:4000";
+export const linkSocket = "https://solipresse.herokuapp.com";
 
 //Alert 
 

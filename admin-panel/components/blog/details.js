@@ -70,7 +70,7 @@ const Details = (props) => {
     }, [props.likeState])
 
     const myLoader=({src})=>{
-        return `${`http://localhost:4000/${state.image.path}`}`;
+        return `${`https://solipresse.herokuapp.com/${state.image.path}`}`;
     }
 
     const handleSelected = (item, name) =>{
@@ -105,11 +105,11 @@ const Details = (props) => {
                                 <div className = {styles.image}>
                                     <Image
                                         loader = {myLoader}
-                                        src= {"http://localhost:4000/"+state.image.path}
+                                        src= {"https://solipresse.herokuapp.com/"+state.image.path}
                                         alt="Picture of the author"
                                         layout = "fill"
                                         placeholder = "blur"
-                                        blurDataURL = {"http://localhost:4000/"+state.image.path}
+                                        blurDataURL = {"https://solipresse.herokuapp.com/"+state.image.path}
                                         unoptimized
                                     />
                                 </div>

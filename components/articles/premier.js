@@ -18,11 +18,11 @@ const Premier = (props) => {
                     <>
                         <div className = {styles.article_image}>
                             <Image
-                                src= {`http://localhost:4000/${props.post.article.image.path}`}
+                                src= {`https://solipresse.herokuapp.com/${props.post.article.image.path}`}
                                 alt="Image"
                                 layout = "fill"
                                 placeholder = "blur"
-                                blurDataURL = {`http://localhost:4000/${props.post.article.image.path}`}
+                                blurDataURL = {`https://solipresse.herokuapp.com/${props.post.article.image.path}`}
                                 unoptimized
                             />
                         </div>
