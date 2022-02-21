@@ -82,7 +82,7 @@ const Pagination = ({page, numberTotalOfPage, hasNextPage, nextPage}) => {
         <div className = {styles.container}>
             {
                 page ? (
-                    <Link href = {`/admin/blog/page/${page - 1}`}>
+                    <Link href = {`/admin/blog/page/${page - 1}`} passHref >
                         <a className = {styles.arrow} >
                             <i className ="fas fa-chevron-left"></i>
                         </a>
@@ -93,7 +93,7 @@ const Pagination = ({page, numberTotalOfPage, hasNextPage, nextPage}) => {
                 {
                     pages.map((item, idx) => {
                         if(item === LEFT_PAGE) return (
-                            <Link href = {`/admin/blog/page/${page - (pageNeighbours * 2) }`}>
+                            <Link href = {`/admin/blog/page/${page - (pageNeighbours * 2) }`} passHref>
                                 <a className = {`${styles.arrow} ${styles.double}`}>
                                     <i className="fas fa-angle-double-left"></i>
                                 </a>
@@ -101,7 +101,7 @@ const Pagination = ({page, numberTotalOfPage, hasNextPage, nextPage}) => {
                         )
 
                         if(item === RIGHT_PAGE) return (
-                            <Link href = {`/admin/blog/page/${page + (pageNeighbours * 2) }`}>
+                            <Link href = {`/admin/blog/page/${page + (pageNeighbours * 2) }`} passHref>
                                 <a className = {`${styles.arrow} ${styles.double}`}>
                                     <i className="fas fa-angle-double-right"></i>
                                 </a>
@@ -109,7 +109,7 @@ const Pagination = ({page, numberTotalOfPage, hasNextPage, nextPage}) => {
                         )
 
                         return(
-                            <Link key = {idx} href = {`/admin/blog/page/${item - 1} `}>
+                            <Link key = {idx} href = {`/admin/blog/page/${item - 1} `} passHref>
                                 <a className= {`${styles.item} ${page === (item - 1) ? styles.selected : ``}`}>
                                         {(item) < 10 ? `0${item}`: (item) }
                                 </a>
@@ -119,8 +119,8 @@ const Pagination = ({page, numberTotalOfPage, hasNextPage, nextPage}) => {
                 }
             </div>
             {
-                !hasNextPage ? (
-                    <Link href = {`/admin/blog/page/${page + 1}`}>
+                hasNextPage ? (
+                    <Link href = {`/admin/blog/page/${page + 1}`} passHref>
                         <a className = {styles.arrow}>
                             <i className ="fas fa-chevron-right"></i> 
                         </a>

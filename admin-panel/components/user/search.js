@@ -14,12 +14,12 @@ export const Search = (props) => {
                 <div onClick = {()=> props.handleSelect("Pending")} className = {`${styles.item} ${props.selected === "Pending" ? styles.selected : null}`}>
                     Pending
                 </div>
-                <div onClick = {()=> props.handleSelect("Unavailable")} className = {`${styles.item} ${props.selected === "Unavailable" ? styles.selected : null}`}>
-                    Unavailable
-                </div>
             </div>
             <div className = {styles.search}>
-                <SearchInput/>
+                <SearchInput
+                    handleChange  = {props.handleChange}
+                    name = {props.name}
+                />
             </div>
         </div>
     )

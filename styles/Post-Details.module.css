@@ -1,0 +1,408 @@
+.container{
+    width: 100vw;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+.header{
+    width: 100%;
+    height: fit-content;
+}
+
+.imageContainer{
+    height: 700px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image{
+    position: relative;
+    height: 900px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 60px;
+}
+
+
+.areaText{
+    position: absolute;
+    color: #fff;
+    width: 70%;
+    min-width: 700px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    font-size: 3em;
+    font-weight: 800;
+    line-height: 1.3;
+    z-index: 1;
+    position: relative;
+    margin: 0 auto;
+    letter-spacing: 1.3px;
+    color: #fff;
+}
+
+.info{
+    display: flex;
+    font-weight: 300;
+    height: fit-content;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.author{
+    font-size: 17px;
+    font-style: italic;
+    margin-right: 7px;
+    cursor: pointer;
+}
+
+.author:hover{
+    color: rgb(237, 151, 151);
+}
+
+.date{
+    font-size: 17px;
+    margin-left: 7px;
+}
+
+.category{
+    width: 100%;
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
+}
+
+.btns{
+    margin-left: 20px;
+    display: flex;
+}
+
+.btn{
+    height: 45px;
+    width: 150px;
+    border: #fff 2px solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.hidden{
+    width: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+
+.btns:hover > .hidden,
+.btns:hover > .btn{
+    min-width: 150px;
+    display: flex;
+    background-color: #fff;
+    color: #000;
+    transition: .4s ease all;
+    padding: 0 10px;
+}
+
+.facebook:hover{
+    color: rgb(2, 116, 255);
+}
+
+.twitter:hover{
+    color: rgb(1, 171, 244);
+}
+
+.whatsapp:hover{
+    color: rgb(0, 186, 28);
+}
+
+.instagram:hover{
+    color: rgb(249, 41, 18);
+}
+
+.btns:hover > .btn:nth-child(1)> span > i{
+    transform: rotate(-180deg);
+    transition: .4s ease transform;
+}
+
+
+.btn > span > i{
+    font-size: 20px;
+    text-align: center;
+}
+
+.post{
+    width: 800px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+
+.content{
+    width: 100%;
+    margin: 60px auto 30px auto;
+    text-align: justify;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+.content > p{
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+.content > a{
+    font-size: 14px;
+}
+
+.footer{
+    width: 100%;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.tags{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.comment{
+    width: 100%;
+    height: fit-content;
+    margin: 0 auto;
+}
+
+.reply{
+    width: calc(100% - 140px);
+    height: fit-content;
+    margin: 0 auto;
+}
+
+.interaction{
+    width: 100%;
+    margin: 20px auto 60px auto;
+}
+
+.bottom_bar{
+    height: 1px;
+    width: 100%;
+    background-color: rgb(233, 233, 233);
+    margin: 10px 0;
+}
+
+.box{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: rgb(145, 144, 144);
+    font-weight: 300;
+    height: fit-content;
+}
+
+.item{
+    cursor: pointer;
+}
+
+.share{
+    display: flex;
+    width: 70px;
+    justify-content: space-between;
+    height: fit-content;
+}
+
+.form{
+    width: 100%;
+    margin: 10px auto;
+}
+
+.collapsed_replies{
+    margin-left: 80px;
+    font-style: italic;
+    color: rgb(29, 68, 222);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.margin_off{
+    margin: 0;
+}
+
+.isliked > i {
+    color: rgb(240, 130, 130);
+    font-weight: 700;
+}
+
+@media (max-width: 1000px) {
+    .post{
+        width: 600px;
+    }
+    .imageContainer{
+        height: 600px;
+    }
+    
+    .image{
+        height: 700px;
+    }
+
+    .areaText{
+        min-width: 600px;
+    }
+}
+
+@media (max-width: 800px) {
+    .header{
+        margin-top: 60px;
+    }
+
+    .title{
+        font-size: 2.7em;
+        font-weight: 700;
+    }
+    
+    .author, 
+    .date{
+        font-size: 15px;
+    }
+
+    .btns{
+        margin-left: 20px;
+        display: flex;
+    }
+    
+    .btn{
+        height: 40px;
+        font-size: 14px;
+    }
+    
+    .content{
+        width: 100%;
+    }
+    
+    .content > p{
+        font-size: 17px;
+        line-height: 1.9;
+    }
+
+    .content > img{
+        width: 80%;
+    }
+    
+    .content > a{
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 700px) {
+    .post{
+        width: 90%;
+    }
+
+    .areaText{
+        min-width: 200px;
+        width: 90%;
+    }
+
+    .btns{
+        width: 80%;
+        margin: 20px 0;
+    }
+
+    .content{
+        font-size: 15px;
+    }
+
+    .content > p{
+        font-size: 15px;
+    }
+
+    .item{
+        font-size: 14px;
+    }
+
+    .reply{
+        width: calc(100% - 70px);
+        margin-right: 0;
+    }
+}
+
+
+@media (max-width: 540px) {
+    .content{
+        margin-top: 40px;
+    }
+    .title{
+        font-size: 2.3em;
+        font-weight: 700;
+    }
+    
+    .author, 
+    .date{
+        font-size: 14px;
+    }
+
+    .imageContainer{
+        height: 500px;
+    }
+    
+    .image{
+        height: 500px;
+    }
+
+    .reply{
+        width: calc(100% - 30px);
+        margin-right: 0;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .title{
+        font-size: 2em;
+        font-weight: 700;
+    }
+    
+    .author, 
+    .date{
+        font-size: 14px;
+    }
+
+    .content{
+        font-size: 14px;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .title{
+        font-size: 1.7em;
+        font-weight: 900;
+    }
+    
+    .author, 
+    .date{
+        font-size: 14px;
+    }
+
+    .content{
+        font-size: 14px;
+    }
+
+}

@@ -114,7 +114,7 @@
     font-weight: 300;
 }
 
-.action > span{
+.action > .span{
     margin-right: 10px;
     height: 35px;
     width: 35px;
@@ -127,7 +127,7 @@
     border-radius: 5px;
 }
 
-.action > span:hover{
+.action > .span:hover{
     background-color: rgb(240, 240, 240) ;
 }
 

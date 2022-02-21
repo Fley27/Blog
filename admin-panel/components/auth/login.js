@@ -36,6 +36,7 @@ export default function Login({auth, ...props}) {
                     subtitle = "Since today, let start to create the greatest magazine that ever exist before."
                     button = "SIGN UP"
                     handleToggle = {props.handleToggle}
+                    link = "register"
                 />
             </div>
         </div>

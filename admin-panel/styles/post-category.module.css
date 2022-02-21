@@ -15,6 +15,11 @@
     text-transform: capitalize;
 }
 
+.isLight{
+    color: #fff;
+    border-color: rgb(208, 208, 208);
+}
+
 .label{
     font-size: .8em;
     font-weight: 700;

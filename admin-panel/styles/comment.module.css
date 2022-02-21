@@ -57,3 +57,44 @@
     font-weight: 700;
     font-size: 13px;
 }
+
+@media (max-width: 700px){
+    .name{
+        font-size: 17px;
+    }
+
+    .comment{
+        font-size: 15px;
+    }
+
+    .date{
+        font-size: 15px;
+    }
+    
+    .reply{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 500px){
+    .name{
+        font-size: 17px;
+    }
+
+    .comment{
+        font-size: 15px;
+    }
+
+    .date{
+        font-size: 15px;
+    }
+    
+    .reply{
+        font-size: 12px;
+    }
+
+    .image{
+        width: 40px;
+        height: 40px;
+    }
+}

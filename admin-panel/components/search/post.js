@@ -15,7 +15,7 @@ export const Listing = ({category, tag, orderBy, sortBy, handleUnselect}) => {
                         <ListingItem
                             key = {idx}
                             type = "Category"
-                            value = {item.value}
+                            value = {item.label}
                             item = {item}
                             handleUnselect  = {handleUnselect}
                             action = "category"
@@ -31,7 +31,7 @@ export const Listing = ({category, tag, orderBy, sortBy, handleUnselect}) => {
                         <ListingItem
                             key = {idx}
                             type = "Tag"
-                            value = {item.value}
+                            value = {item.label}
                             item = {item}
                             handleUnselect  = {handleUnselect}
                             action = "tag"
@@ -46,7 +46,7 @@ export const Listing = ({category, tag, orderBy, sortBy, handleUnselect}) => {
                         <ListingItem
                             key = {idx}
                             type = "Order"
-                            value = {item.value}
+                            value = {item.label}
                             item = {item}
                             handleUnselect  = {handleUnselect}
                             action = "orderBy"
@@ -62,7 +62,7 @@ export const Listing = ({category, tag, orderBy, sortBy, handleUnselect}) => {
                         <ListingItem
                             key = {idx}
                             type = "Sort"
-                            value = {item.value}
+                            value = {item.label}
                             item = {item}
                             handleUnselect  = {handleUnselect}
                             action = "sortBy"
@@ -75,32 +75,7 @@ export const Listing = ({category, tag, orderBy, sortBy, handleUnselect}) => {
     )
 }
 
-export const PostSearch = () => {
-
-    const [state, setState] = useState({
-        category: [
-            {value: "Tecnologie", isSelected: false},
-            {value: "Sexo", isSelected: false},
-            {value: "Beauté", isSelected: false},
-            {value: "Société", isSelected: false},
-            {value: "Mode", isSelected: false},
-            {value: "Lifestyle", isSelected: false},
-            {value: "Jobs Et Études", isSelected: false},
-        ],
-        tag: [
-            {value: "#Féminisme", isSelected: false},
-            {value: "#Sexiste", isSelected: false},
-            {value: "#Machisme", isSelected: false},
-        ],
-        orderBy: [
-            {value: "Ascendant", isSelected: false},
-            {value: "Descendant", isSelected: false},
-        ],
-        sortBy: [
-            {value: "Title", isSelected: false},
-            {value: "Author", isSelected: false},
-        ]
-    })
+export const PostSearch = ({state, setState, handleOnClick, handleChange, search, status}) => {
 
     const [toggle, setToggle] = useState({
         category: false,
@@ -125,16 +100,13 @@ export const PostSearch = () => {
         let array = prevArray;
         const object = {
             value: item.value,
-            isSelected: !item.isSelected
+            isSelected: !item.isSelected,
+            label: item.label
         }
         const index = array.indexOf(item);
         array[index] = object;
-        if(action === "sortBy" || action === "orderBy"){
-            if(index === 0)
-                array = toggleArray(array, 1)
-            else 
-                array = toggleArray(array)
-        }
+        if(action === "sortBy" || action === "orderBy")
+            array = toggleArray(array, index)
         setState(prevState=> ({...prevState, [action]: array }));
     }
 
@@ -142,7 +114,8 @@ export const PostSearch = () => {
         let array = prevArray;
         const object = {
             value: item.value,
-            isSelected: !item.isSelected
+            isSelected: !item.isSelected,
+            label: item.label,
         }
         const index = array.indexOf(item);
         array[index] = object;
@@ -150,14 +123,29 @@ export const PostSearch = () => {
     }
 
     const toggleArray = (array = [], position = 0, ) => {
-        array[position] = {value: array[position].value, isSelected: false}
+        array.map((item, idx) =>{
+            if(idx !== position)
+                array[idx] = {value: array[idx].value, label: array[idx].label, isSelected: false}
+        } )
         return array;
     }
 
     return(
         <div className = {styles.container}>
             <div className = {styles.search}>
-                <SearchInput/>
+                <div className = {`${styles.item} ${styles.wider}`}>
+                    <SearchInput
+                        handleChange = {handleChange}
+                        handleOnClick = {handleOnClick}
+                        status = {status}
+                        name = {search}
+                    />
+                </div>
+                <div className = {`${styles.item} `}>
+                    <div onClick = {()=> handleOnClick()} className = {`${styles.button} ${styles.green}`}>
+                        Search
+                    </div>
+                </div>
             </div>
             <Listing
                 orderBy = {state.orderBy}

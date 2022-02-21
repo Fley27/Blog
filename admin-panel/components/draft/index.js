@@ -1,27 +1,52 @@
-import React, {useState, useEffect} from "react";
-import Head from "next/head";
+import React, {useState} from "react";
 import { connect } from 'react-redux';
 import PropTypes from "prop-types";
-import BlogPost from "../blog/post/post";
-import { draftsArticles } from "../../../redux/actions/post";
+import Head from "next/head";
+import PaginationList from "../blog/pagination/page";
 import styles from "../../styles/blog.module.css";
 
-const Draft = (props) => {
-    
-    const [state, setState] = useState([]);
+const Drafts = (props) => {
 
-    useEffect(() => {
-        props.draftsArticles(props.auth.token)
-    }, [])
+    const [postSearch, setPostSearch] = useState({
+        category: [
+            {value: "tecnologie", label: "Tecnologie", isSelected: true},
+            {value: "sexo", label: "Sexo",  isSelected: true},
+            {value: "beauté", label: "Beauté", isSelected: true},
+            {value: "société", label: "Société", isSelected: true},
+            {value: "mode", label: "Mode", isSelected: true},
+            {value: "lifestyle", label: "Lifestyle", isSelected: true},
+            {value: "jobs-et-études", label: "Jobs Et Études", isSelected: true},
+            {value: "bon-plans", label: "Bon Plans", isSelected: true},
+        ],
+        tag: [
+            {label: "Féminisme", value: "féminisme", isSelected: true},
+            {label: "Socialisme", value: "socialisme", isSelected: true},
+            {label: "Sexe", value: "sexe", isSelected: true},
+            {label: "Transgenre", value: "transgenre", isSelected: true},
+            {label: "Homosexulité", value: "homosexulité", isSelected: true},
+            {label: "Bisexualité", value: "bisexualité", isSelected: true},
+            {label: "LGBT", value: "LGBT", isSelected: true},
+            {label: "Politique", value: "politique", isSelected: true},
+            {label: "LGBTQ", value: "LGBTQ", isSelected: true},
+            {label: "Economie", value: "economie", isSelected: true},
+        ],
+        orderBy: [
+            {value: "ascendant", label: "Ascendant", isSelected: true},
+            {value: "descendant", label: "Descendant", isSelected: false},
+        ],
+        sortBy: [
+            {value: "title", label: "Title", isSelected: true},
+            {value: "description", label: "Description", isSelected: false},
+            {value: "content", label: "Content", isSelected: false},
+        ]
+    })
 
-    useEffect(() => {
-        setState(props.post.drafts);
-    }, [props])
+    const [search, setSearch] = useState("");
 
     return(
-        <div className = {styles.container}>
+        <div className = {`${styles.container} `}>
             <Head>
-                <title>Draft</title>
+                <title>Drafts</title>
                 <meta name="description" content="Solipresse" />
                 <link rel="preconnect" href="https://fonts.googleapis.com"/>
                 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"></link>
@@ -31,30 +56,28 @@ const Draft = (props) => {
                 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet"></link>
                 <meta charset="utf-8" />            
             </Head>
-            <div className = {styles.posts}>
-                {
-                    state.map((item, idx)=>
-                        <div key = {idx} className = {styles.post}>
-                            <BlogPost
-                                title = {item.title}
-                                description = {item.description}
-                                img = {`http://localhost:4000/${item.image.path}`}
-                                category = {item.category[0]}
-                                link = {`/admin/drafts/${item._id}`}
-                            />
-                        </div>
-                    )
-                }
-            </div>
+
+            {
+                props.id >= 0 ? (
+                    <PaginationList
+                        token = {props.auth.token}
+                        page = {props.id}
+                        state = {postSearch}
+                        search = {search}
+                        setState = {setPostSearch}
+                        setSearch = {setSearch}
+                        isAvailable = {false}
+                    />
+                ):null
+            }
         </div>
     )
 }
 
 
-Draft.propTypes = {
+Drafts.propTypes = {
     auth: PropTypes.object.isRequired,
     post: PropTypes.object.isRequired,
-    draftsArticles: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
@@ -63,4 +86,4 @@ const mapStateToProps = (state) => ({
 });
 
 
-export default connect(mapStateToProps, {draftsArticles})(Draft);
+export default connect(mapStateToProps)(Drafts);

@@ -1,6 +1,6 @@
 import styles from "../../../../styles/details-tab.module.css"
 
-export const BasicDetailCard = () => (
+export const BasicDetailCard = ({user}) => (
     <div className = {styles.card}>
             <div className = {styles.header}>
                 <div className = {styles.title}>Basic Details</div>
@@ -10,18 +10,18 @@ export const BasicDetailCard = () => (
                     <div className = {styles.left}>
                         FirstName:
                     </div> 
-                    <span>Fenley Jude Viky</span>
+                    <span>{user.firstName}</span>
                 </div>
                 <div className = {styles.item}>
                     <div className = {styles.left}>
                         LastName: 
-                    </div><span>Menelas</span>
+                    </div><span>{user.lastName}</span>
                 </div>
                 <div className = {styles.item}>
                     <div className = {styles.left}>
                         Email: 
                     </div>
-                    <span>fenleymenelas@gmail.com</span>
+                    <span>{user.email}</span>
                 </div>
                 <div className = {styles.item}>
                     <div className = {styles.left}>

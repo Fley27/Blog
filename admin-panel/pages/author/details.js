@@ -1,9 +1,13 @@
 import Details from "../../components/user/details";
 
-export default function AuthorDetails (){
+export default function AuthorDetails ({id}){
     return(
-        <Details
-            title = "Author"
-        />
+        id ? (
+            <Details
+                title = "Author"
+                id = {id}
+                link  = "author"
+            />
+        ): null
     )
 }

@@ -1,6 +1,6 @@
 
 .container{
-    width: 50%;
+    width: 100%;
     height: fit-content;
     margin: 20px auto;
     transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
@@ -18,6 +18,44 @@
     margin: 0 auto;
     height: fit-content;
     border-bottom: 1px solid rgb(233, 232, 232);
+    padding: 20px 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item{
+    width: 10%;
+    min-width: 120px;
+}
+
+.wider{
+    width: 85%;
+}
+
+.button{
+    width: 100%;
+    height: 45px;
+    padding: 0 20px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.green{
+    border-color: rgb(16, 185, 129);
+    color: rgb(16, 185, 129);
+}
+
+.green:hover{
+    background-color: rgb(241, 255, 250);
 }
 
 .listing{

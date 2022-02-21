@@ -23,7 +23,7 @@ const initialState = {
     loading: false,
     article: null, 
     isUpdate: false,
-    articles: null,
+    articles: [],
     prevArticles: [],
     pageNumber: 0,
     drafts: [],
@@ -40,7 +40,6 @@ export default function reducer ( state = initialState, action) {
                 loading: true,
                 isUpdate: false,
             }
-        case ALL_ARTICLE_REQUEST:
         case GET_ARTICLE_REQUEST:
         case NEW_ARTICLE_REQUEST:
         case DRAFTS_ARTICLE_REQUEST:
@@ -49,11 +48,18 @@ export default function reducer ( state = initialState, action) {
                 loading: true,
                 article: null,
                 isUpdate: false,
+            }
+
+        
+        case ALL_ARTICLE_REQUEST:
+            return {
+                ...state, 
+                loading: true,
                 articles: [],
                 drafts: []
             }
+
         case ALL_ARTICLE_SUCCESS:
-            console.log(payload.pageNumber);
             return {
                 ...state,
                 loading: false,
@@ -95,6 +101,11 @@ export default function reducer ( state = initialState, action) {
                 isUpdate: false,
             }
         case ALL_ARTICLE_FAIL:
+            return {
+                ...state,
+                loading: false,
+                articles: [null],
+            }
         case GET_ARTICLE_FAIL:
         case DRAFTS_ARTICLE_FAIL:
         case NEW_ARTICLE_FAIL:
@@ -103,9 +114,7 @@ export default function reducer ( state = initialState, action) {
                 loading: false,
                 article: null,
                 isUpdate: false,
-                articles: null,
                 pageNumber: 0,
-                drafts: []
             }
         default: {
             return state

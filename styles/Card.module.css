@@ -19,7 +19,7 @@
     margin: 0 auto;
     min-height: 300px;
     background-color: #fff;
-    box-shadow: 0 15px 15px 0 rgba(173, 171, 171, 0.235);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     padding: 50px 25px 40px 25px;
     position: relative;
     z-index: 3;

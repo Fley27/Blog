@@ -22,6 +22,61 @@ import {
 import axios from "axios";
 import { setAlert } from "./alert";
 
+export const fetchSimilarsArticles = (body) => async (dispatch) => {
+
+    const config = {
+        headers: {
+            "Content-Type": "application/json",
+        },
+    }
+    dispatch({
+        type: ALL_ARTICLE_REQUEST
+    })
+    try {
+        const res = await axios.post(`${link}/article/similar`,
+            body,
+            config
+        )
+        
+        dispatch({
+            type: ALL_ARTICLE_SUCCESS,
+            payload: res.data
+        });
+    } catch (error) {
+        dispatch({
+            type: ALL_ARTICLE_FAIL
+        })
+        console.log(error);
+        dispatch(setAlert(`Could not fetch any article`, error.response.data.message , `error`))
+        console.log(error)
+    }
+}
+
+export const getArticlePremiere = () => async (dispatch) => {
+    const config = {
+        headers: {
+            "Content-Type": "application/json",
+        },
+    }
+    dispatch({
+        type: GET_ARTICLE_REQUEST
+    })
+    try {
+        const res = await axios.get(`${link}/article/premiere`, 
+            config
+        )
+        dispatch({
+            type: GET_ARTICLE_SUCCESS,
+            payload: res.data
+        })
+    } catch (error) {
+        dispatch({
+            type: GET_ARTICLE_FAIL
+        })
+        //dispatch(setAlert(`Could not fetch this article`, error.response.data.message , `error`))
+        console.log(error)
+    }
+}
 
 export const removedArticle = (token, id) => async (dispatch) => {
     const config = {
@@ -204,7 +259,7 @@ export const newArticle = (data, token) => async (dispatch) => {
             payload: res.data
         })
 
-        dispatch(setAlert(`This acrticle has been add successfully.`, `success`))
+        dispatch(setAlert(`This acrticle has been add successfully.`, "", `success`))
     } catch (error) {
         dispatch({
             type: NEW_ARTICLE_FAIL

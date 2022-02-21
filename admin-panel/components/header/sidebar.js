@@ -35,22 +35,12 @@ const Sidebar = ({toggle, handleSelect, select}) => {
                         <div className = {styles.label}>Blog</div>
                     </a>
                 </Link>
-                <Link href = "/admin/drafts" >
+                <Link href = "/admin/drafts/page/0" >
                     <a onClick = {()=> handleSelect("draft") } className = {select === "draft" ? styles.seleted_item : styles.item}>
                         <div className = {`${styles.icon} ${styles.drafts}`}><i className="fas fa-newspaper"></i></div>
                         <div className = {styles.label}>Drafts</div>
                     </a>
                 </Link>
-                <Link href = "/admin/event" >
-                    <a onClick = {()=> handleSelect("events") } className = {select === "events" ? styles.seleted_item : styles.item}>
-                        <div className = {styles.icon}><i className="fas fa-calendar-alt"></i></div>
-                        <div className = {styles.label}>Events</div>
-                    </a>
-                </Link>
-            </div>
-            <div className = {styles.btn}>
-                <div className = {styles.icon}><i className="fas fa-sign-out-alt"></i></div>
-                <div className = {styles.label}>Logout</div>
             </div>
         </div>
     )

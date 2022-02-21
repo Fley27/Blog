@@ -1,13 +1,46 @@
-import React, {useState} from 'react';
+import React, {useState, useLayoutEffect, useEffect} from 'react';
 import Head from 'next/head'
 import Header from '../general/header';
+import dynamic from 'next/dynamic';
 import { Search } from './search';
 import { TableUsers } from '../table/user';
+const Empty = dynamic(() => import("../../error/empty"));
 import styles from '../../styles/analytic.module.css';
 
-export default function User({title}) {
+const User = ({title, fetchUsers, auth, user, link}) => {
     const [selected, setSelected] = useState("All");
-    const handleSelect = (item) => setSelected(item)
+    const [users, setUsers] = useState([]);
+    const [name, setName] = useState("");
+    const [loading, setLoading] = useState(false);
+    useLayoutEffect(()=>{
+        const body = {
+            name: name,
+            status: selected
+        }
+        fetchUsers(auth.token, link, JSON.stringify(body))
+    }, [])
+
+    useEffect(() => {
+        setUsers(user.users);
+        
+    }, [user])
+
+    const handleSelect = (item) => {
+        setSelected(item);
+        const body = {
+            name: name,
+            status: item
+        }
+        fetchUsers(auth.token, link, JSON.stringify(body))
+    }
+    const handleChange = (e) => {
+        setName(e.target.value);
+        const body = {
+            name: e.target.value,
+            status: selected
+        }
+        fetchUsers(auth.token, link, JSON.stringify(body))
+    }
     return (
         <div className={styles.container}>
             <Head>
@@ -24,8 +57,26 @@ export default function User({title}) {
             <Search
                 selected = {selected}
                 handleSelect = {handleSelect}
+                handleChange = {handleChange}
+                name = {name}
             />
-            <TableUsers/>
+            {
+                users.length ? (
+                    <TableUsers
+                        users = {users}
+                        link = {link}
+                    />
+                ): null
+            }
+            {
+                !users.length ?( 
+                    <Empty 
+                        title = {link}
+                    /> 
+                ): null
+            }
         </div>
     )
 }
+
+export default User;

@@ -75,7 +75,7 @@ const Details = (props) => {
 
     const handleSelected = (item, name) =>{
         setSelected(item);
-        setNameSelected(`@${name}`)
+        setNameSelected(`${name}`)
         setIsCollapsedIndex(item);
     }
 

@@ -29,9 +29,9 @@ const Auth = (props) => {
     useEffect(()=>{
         const {token, isAuthenticated} = props.auth;
         if(token && isAuthenticated)
-            window.location.href = `/admin/dashboard${props.auth.redirectTo}`
+            console.log("window.location.href = `/admin/dashboard${props.auth.redirectTo}`")
         else if(token && isAuthenticated && !toggle)
-            window.location.href = "/feeds"
+            console.log("window.location.href = ")
     },[props.auth])
 
     const handleToggle = () =>{

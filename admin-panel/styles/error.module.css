@@ -1,0 +1,26 @@
+.container{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.isPage{
+    height: calc(100vh - 120px);
+}
+
+.title{
+    font-size: 30px;
+    font-weight: 700;
+    color: rgba(18, 4, 4, 0.892);
+    line-height: 1.5;
+    text-align: center;
+}
+
+.image{
+    position: relative;
+    width: 50vh;
+    height: 40vh;
+}

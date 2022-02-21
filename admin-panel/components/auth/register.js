@@ -9,7 +9,7 @@ export default function SignUp({auth, ...props}) {
     return (
         <div className={styles.container}>
             <Head>
-                <title>Solipresse || Auth</title>
+                <title>Register</title>
                 <meta name="description" content="Join our community." />
                 <link rel="icon" href="/favicon.ico" />
                 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossOrigin="anonymous"/>
@@ -21,7 +21,7 @@ export default function SignUp({auth, ...props}) {
                     title = "Welcome Back !!!"
                     subtitle = "Stay connected with us, and build the largest platform dedicated to educating people every day."
                     button = "SIGN IN"
-                    handleToggle = {props.handleToggle}
+                    link = "login"
                 />
             </div>
             <div className  = {styles.formContainer}>

@@ -3,12 +3,12 @@ import NavMobile from "./nav-mobile";
 import Title from "./title";
 import styles from "../../styles/Header.module.css";
 
-const Header = () => (
+const Header = ({label}) => (
     <div className = {styles.container}>
         <Nav/>
         <Title 
             title =  "Solipresse"
-            category = "Home"
+            category = {label}
         />
         <NavMobile 
             main_link = '/mode'

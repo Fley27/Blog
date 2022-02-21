@@ -10,7 +10,7 @@ const Nav = () => (
                 </Link>
             </div>
             <div className = {styles.item}>
-                <Link href="/beauté">
+                <Link href="/beaute">
                     <a>BEAUTÉ</a>
                 </Link>
             </div> 
@@ -20,7 +20,7 @@ const Nav = () => (
                 </Link>
             </div>
             <div className = {styles.item}>
-                <Link href="/société">
+                <Link href="/societe">
                     <a>SOCIÉTÉ</a>
                 </Link>
             </div>
@@ -30,7 +30,7 @@ const Nav = () => (
                 </Link>
             </div>
             <div className = {styles.item}>
-                <Link href="/jobs-et-études">
+                <Link href="/jobs-et-etudes">
                     <a>JOBS ET ÉTUDES</a>
                 </Link>
             </div>
@@ -45,12 +45,9 @@ const Nav = () => (
                 </Link>
             </div>
             <div className = {styles.item}>
-                <Link href="/bon-plan">
+                <Link href="/bon-plans">
                     <a>BON PLANS</a>
                 </Link>
-            </div>
-            <div className = {styles.nav_item}>
-                <i className ="fas fa-moon"></i>
             </div>
         </div>
     </div>

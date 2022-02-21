@@ -13,7 +13,8 @@ const Form = ({state, setState, pagination, approvedArticle, token, id}) => {
         year: "",
         hour: "",
         minute: "",
-        date: ""
+        date: "",
+        type: "",
     })
 
     const [date, setDate]  = useState({
@@ -67,6 +68,7 @@ const Form = ({state, setState, pagination, approvedArticle, token, id}) => {
     const formValidation = () =>{
         setError({
             post: "", 
+            type: "",
             month: "",
             day: "",
             year: "",
@@ -76,6 +78,7 @@ const Form = ({state, setState, pagination, approvedArticle, token, id}) => {
         })
 
         const post = inputValidation("post", state.post);
+        const postType = inputValidation("post", state.type);
         let month = "", day = "", hour = "", minute = "";
 
         if(state.post === "Scheduled"){
@@ -89,7 +92,7 @@ const Form = ({state, setState, pagination, approvedArticle, token, id}) => {
             }
         }
 
-        if( post || month || day || hour || minute)
+        if( post || month || day || hour || minute || postType)
             return false;
     
         return true;
@@ -98,10 +101,10 @@ const Form = ({state, setState, pagination, approvedArticle, token, id}) => {
     const handleSubmit = () =>{
         const result = formValidation();
         if(result){
-            alert("KK")
             const obj = {
                 category: state.post,
                 day: date.day,
+                type: state.type,
                 month: date.month,
                 year: date.year ? date.year : currentDate.year,
                 hour: time.hour,
@@ -115,7 +118,20 @@ const Form = ({state, setState, pagination, approvedArticle, token, id}) => {
         <div className = {styles.container}>
             <form className = {styles.form}>
                 <div className = {styles.col}>
-                    <div className = {styles.label}>Post</div>
+                    <div className = {styles.label}>Post Type</div>
+                    <div className = {styles.error}>{error.type}</div>
+                    <select 
+                        onChange = {handleChange} 
+                        className = {error.type ? styles.error_input : styles.input} 
+                        name = "type" 
+                    >
+                        <option value="">Select...</option>
+                        <option value="Normal">Normal</option>
+                        <option value="Première">Première</option>
+                    </select>
+                </div>
+                <div className = {styles.col}>
+                    <div className = {styles.label}>Post Category</div>
                     <div className = {styles.error}>{error.post}</div>
                     <select 
                         onChange = {handleChange} 

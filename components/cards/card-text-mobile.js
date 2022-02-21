@@ -1,21 +1,18 @@
+import dateFormat  from "dateformat";
 import styles from "../../styles/Card-text-mobile.module.css"
 
-const CardText = () => (
+const CardText = (props) => (
     <div className = {styles.container}>
         <div className = {styles.header}>
-            <div className = {styles.category}>Holidays</div>
+            <div className = {styles.category}>{props.category}</div>
             <div className = {styles.item}>
-                <div className = {styles.date}><span><i className="fas fa-calendar-alt"></i></span> March 14, 2021</div>
-                <div className =  {styles.comment}><span><i className="far fa-comment"></i></span> 05</div>
+                <div className = {styles.date}><span><i className="fas fa-calendar-alt"></i></span>{dateFormat(props.date, " mmmm dd, yyyy")}</div>
             </div>
         </div>
         <div className = {styles.body}>
-            <div className = {styles.title}>Nest Protect: 2nd Gen Smoke + CO Alarm</div>
-            <div className = {styles.description}>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidid unt ut labore et dolore magna aliqua.</div>
+            <div onClick = {() => window.location.href = props.link} className = {styles.title}>{props.title}</div>
+            <div className = {styles.description}>{props.description}</div>
         </div>
-        <button className = {styles.btn}>
-            Read More
-        </button>
     </div>
 )
 

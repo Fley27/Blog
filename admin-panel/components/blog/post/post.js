@@ -29,13 +29,6 @@ const BlogPost = ({img, title, description, category, link}) =>{
                 </div>
                 <div onClick = {() => window.location.href = link} className = {styles.title}>{title}</div>
                 <div className = {styles.description}>{description}</div>
-                <div className = {styles.row}>
-                    <div className = {styles.item}>
-                        <div className = {styles.date}><span><i className="fas fa-calendar-alt"></i></span> 04/19/2021</div>
-                        <div className =  {styles.comment}><span><i className="far fa-comment"></i></span> 05</div>
-                        <div className = {styles.comment}><span><i className="far fa-heart"></i></span>  10</div>
-                    </div>
-                </div>
             </div>
         </div>
     )

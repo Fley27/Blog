@@ -9,13 +9,15 @@ const Form = ({state, setState, signUp}) => {
     const email = useRef();
     const lastName = useRef();
     const firstName = useRef();
+    const userType = useRef
     const password = useRef();
 
     const [error, setError] = useState({
         email : "",
         firstName: "", 
         lastName: "",
-        password: ""
+        password: "",
+        userType: ""
     })
     
 

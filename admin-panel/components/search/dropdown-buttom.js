@@ -18,7 +18,7 @@ export const DropdownButton = (props) => {
                                             item.isSelected ? <i className="far fa-check-square"></i> : <i className="far fa-square"></i>
                                         }
                                     </span>
-                                    <span  className = {styles.type}>{item.value}</span>
+                                    <span  className = {styles.type}>{item.label}</span>
                                 </div>
                             ))
                         }

@@ -6,6 +6,7 @@ import auth from "./auth";
 import post from "./post"
 import comment from "./comment"
 import like from "./like"
+import user from "./user"
 
 
 const persistConfig = {
@@ -19,7 +20,8 @@ const rootReducer =  combineReducers({
     auth,
     post,
     comment,
-    like
+    like,
+    user
 });
 
 export default persistReducer(persistConfig, rootReducer)

@@ -64,9 +64,7 @@ export const signIn = (userData) => async (dispatch) => {
         dispatch({
             type: SIGN_IN_FAIL
         })
-        alert(JSON.stringify(error.response.data))
         dispatch(setAlert(`Can't sign in`, error.response.data.msg , `error`))
-        
     }
 }
 

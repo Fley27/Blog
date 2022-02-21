@@ -58,6 +58,55 @@
     font-size: 18px;
     font-weight: 500;
     cursor: pointer;
+    height: fit-content;
+}
+
+.col{
+    width: 45%;
+    margin: 0;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.col:nth-child(2){
+    margin: 0;
+    margin-left: 5%;
+}
+
+.label{
+    letter-spacing: 1.4px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.input{
+    height: 50px;
+    border: 0px;
+    background-color: rgb(249, 249, 249);
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 15px;
+    letter-spacing: 1.4px;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+.error_input{
+    background-color: rgb(255, 246, 246);
+}
+
+.error{
+    color: rgb(227, 36, 36);
+    font-size: 12px;
+    margin-bottom: 10px;
+    height: 10px;
+}
+
+.input:focus,
+.error_input:focus{
+    outline: 0;
+    background-color: rgb(245, 245, 245);
 }
 
 .left{
@@ -75,6 +124,10 @@
     padding: 20px 40px;
 }
 
+.buttons{
+    display: flex;
+}
+
 .button{
     width: fit-content;
     height: 45px;
@@ -85,6 +138,7 @@
     font-weight: 600;
     border-radius: 5px;
     cursor: pointer;
+    margin-right: 10px;
 }
 
 .mauvre{
@@ -103,6 +157,15 @@
 
 .red:hover{
     background-color: rgb(255, 246, 246);
+}
+
+.green{
+    border-color: rgb(16, 185, 129);
+    color: rgb(16, 185, 129);
+}
+
+.green:hover{
+    background-color: rgb(241, 255, 250);
 }
 
 .caution{

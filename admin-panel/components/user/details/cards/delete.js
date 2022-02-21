@@ -1,6 +1,6 @@
 import styles from "../../../../styles/details-tab.module.css"
 
-export const DeleteDetailCard = () => (
+export const DeleteDetailCard = ({user}) => (
     <div className = {styles.card}>
             <div className = {styles.header}>
                 <div className = {styles.title}>Data Management</div>
