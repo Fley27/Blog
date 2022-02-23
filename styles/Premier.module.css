@@ -34,6 +34,7 @@
     width: 80%;
     z-index: 2;
     min-height: 400px;
+    height: fit-content;
     padding: 0 100px;
     position:absolute;
 } 
@@ -75,7 +76,12 @@
 @media (max-width: 500px) {
     .article_image,
     .container{
-        height: 450px;
+        height: 400px;
+    }
+
+    .card{
+        height: fit-content;
+        min-height: 50px;
     }
 }
 
