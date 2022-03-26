@@ -42,14 +42,6 @@ const NavMobile = ({main_link, ...props}) => {
                             <div className = "nav-item-mobile">
                                 <button onClick = {()=>window.location.href = "/bon-plans"} className = {`nav-item-mobile-text ${main_link === "/bon-plan" ? " nav-item-selected" : ""}`}>Bon Plans</button>
                             </div>
-                            <div className = "nav-item-mobile">
-                                <button className = "nav-item-mobile-text">
-                                    {
-                                        props.dark ? (<span onClick = {()=>props.setMode(false)}><i className="fas fa-moon"></i> {" "}Light</span>): 
-                                        (<span onClick = {()=>props.setMode(true)}><i className="far fa-moon"></i>{" "}Night</span>)
-                                    }
-                                </button>
-                            </div>
                         </div>
                     ): (
                         <div className = "menu-mobile-header">
