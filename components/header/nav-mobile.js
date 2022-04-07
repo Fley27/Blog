@@ -25,19 +25,10 @@ const NavMobile = ({main_link, ...props}) => {
                                 <button onClick = {()=>window.location.href = "/beaute"} className = {`nav-item-mobile-text ${main_link === "/beaute" ? " nav-item-selected" : ""}`}>Beauté</button>
                             </div>
                             <div className = "nav-item-mobile">
-                                <button onClick = {()=>window.location.href = "/mode"} className = {`nav-item-mobile-text ${main_link === "/mode" ? " nav-item-selected" : ""}`}>Mode</button>
-                            </div>
-                            <div className = "nav-item-mobile">
                                 <button onClick = {()=>window.location.href = "/societe"} className = {`nav-item-mobile-text ${main_link === "/société" ? " nav-item-selected" : ""}`}>Société</button>
                             </div>
                             <div className = "nav-item-mobile">
                                 <button onClick = {()=>window.location.href = "/sexo"} className = {`nav-item-mobile-text ${main_link === "/sexo" ? " nav-item-selected" : ""}`}>Sexo</button>
-                            </div>
-                            <div className = "nav-item-mobile">
-                                <button onClick = {()=>window.location.href = "/job-et-etude"} className = {`nav-item-mobile-text ${main_link === "/job-et-etude" ? " nav-item-selected" : ""}`}>Jobs Et Études</button>
-                            </div>
-                            <div className = "nav-item-mobile">
-                                <button onClick = {()=>window.location.href = "/technologie"} className = {`nav-item-mobile-text ${main_link === "/technologie" ? " nav-item-selected" : ""}`}>Technologie</button>
                             </div>
                             <div className = "nav-item-mobile">
                                 <button onClick = {()=>window.location.href = "/bon-plans"} className = {`nav-item-mobile-text ${main_link === "/bon-plan" ? " nav-item-selected" : ""}`}>Bon Plans</button>
