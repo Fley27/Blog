@@ -1,6 +1,6 @@
 .container{
     width: 100vw;
-    height: 800px;
+    height: 600px;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -10,7 +10,7 @@
 }
 
 .article_image{
-    height: 900px;
+    height: 600px;
     width: 100%;
     overflow: hidden;
     position: absolute;
@@ -33,7 +33,6 @@
 .card{
     width: 80%;
     z-index: 2;
-    min-height: 400px;
     height: fit-content;
     padding: 0 100px;
     position:absolute;
@@ -57,31 +56,29 @@
 
 @media (max-width: 800px) {
     .container{
-        height: 550px;
+        height: 500px;
         margin-top: 60px;
     }
     .article_image{
         width: 100%;
         height: 550px;
     }
-}
 
-
-@media (max-width: 600px) {
     .card{
-        width: 80%;
+        height: fit-content;
+        width: 90%;
     }
 }
+
 
 @media (max-width: 500px) {
     .article_image,
     .container{
-        height: 400px;
+        height: 500px;
     }
 
     .card{
         height: fit-content;
-        min-height: 50px;
     }
 }
 
@@ -91,6 +88,13 @@
     }
 }
 
+
+@media (max-width: 400px) {
+    .container,
+    .article_image{
+        height: 550px;
+    }
+}
 
 
 

@@ -127,3 +127,19 @@
     position: absolute;
     background: rgba(218, 117, 117, 0.817);
 }
+
+@media only screen and (max-width: 1680px) {
+
+    .container{
+        min-width: 360px;
+    }
+
+}
+
+@media only screen and (max-width: 1400px) {
+
+    .container{
+        width: 40%;
+    }
+
+}

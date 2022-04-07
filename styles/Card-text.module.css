@@ -3,6 +3,7 @@
     height: auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .btn{
@@ -26,13 +27,14 @@
 }
 
 .title{
-    font-size: 4.5em;
-    font-weight: 600;
-    line-height: 85px;
-    margin-bottom: 60px;
+    font-size: 5em;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 40px;
     color: #fff;
     width: 1000px;
     cursor: pointer;
+    font-family: 'prompt', sans-serif;
 }
 
 .title:hover{
@@ -43,10 +45,11 @@
     color: #fff;
     line-height: 40px;
     letter-spacing: 1px;
-    font-size: 1.4em;
+    font-size: 1.3em;
     font-weight: 300;
     width: 600px;
-    margin-bottom: 40px;
+
+    font-family: "prompt", sans-serif;
 }
 
 .btn{
@@ -68,7 +71,7 @@
 
 @media (max-width: 1400px) {
     .title{
-        font-size: 3.8em;
+        font-size: 4.5em;
         width: auto;
     }
 }
@@ -76,12 +79,11 @@
 @media (max-width: 1000px) {
     .title{
         margin-bottom: 30px;
-        font-size: 3.2em;
+        font-size: 3.7em;
         width: auto;
     }
 
     .description{
-        margin-bottom: 20px;
         width: auto;
     }
 }
@@ -90,12 +92,11 @@
     .title{
         margin-bottom: 30px;
         line-height: 50px;
-        font-size: 2.5em;
+        font-size: 3em;
     }
 
     .description{
         font-size: 1.1em;
-        margin-bottom: 20px;
     }
 
     .btn{
@@ -106,13 +107,13 @@
 
 @media (max-width: 500px) {
     .title{
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         line-height: 50px;
-        font-size: 2em;
+        font-size: 2.2em;
     }
 
     .description{
-        display: none;
+        font-size: 16px;
     }
 
     .btn{
@@ -123,3 +124,17 @@
     }
 
 }
+
+@media (max-width: 400px) {
+    .title{
+        margin-bottom: 20px;
+        line-height: 50px;
+        font-size: 2.1em;
+    }
+
+    .description{
+        font-size: 15px;
+    }
+
+}
+

@@ -15,11 +15,6 @@ const Nav = () => (
                 </Link>
             </div> 
             <div className = {styles.item}>
-                <Link href="/mode">
-                    <a>MODE</a>
-                </Link>
-            </div>
-            <div className = {styles.item}>
                 <Link href="/societe">
                     <a>SOCIÉTÉ</a>
                 </Link>
@@ -27,21 +22,6 @@ const Nav = () => (
             <div className = {styles.item}>
                 <Link href="/sexo">
                     <a>SEXO</a>
-                </Link>
-            </div>
-            <div className = {styles.item}>
-                <Link href="/jobs-et-etudes">
-                    <a>JOBS ET ÉTUDES</a>
-                </Link>
-            </div>
-            <div className = {styles.item}>
-                <Link href="/lifestyle">
-                    <a>LIFESTYLE</a>
-                </Link>
-            </div>
-            <div className = {styles.item}>
-                <Link href="/technologie">
-                    <a>TECHNOLOGIE</a>
                 </Link>
             </div>
             <div className = {styles.item}>

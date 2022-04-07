@@ -24,6 +24,7 @@ const Premier = (props) => {
                                 placeholder = "blur"
                                 blurDataURL = {`https://solipresse.herokuapp.com/${props.post.article.image.path}`}
                                 unoptimized
+                                objectFit = "50% 50%"
                             />
                         </div>
                         <div className = {styles.overlay}></div>

@@ -130,7 +130,7 @@ function PaginationList({ page, token, toggle, state, search, setState, setSearc
                         status = "blog"
                     /> : null
             }
-            {
+            { 
                 articles.map((item, idx)=>
                     <div ref = {idx === articles.length - 1 ? observe : null} key = {idx.toString()} className = {styles.post}>
                         <BlogPost

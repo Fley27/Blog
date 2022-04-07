@@ -4,11 +4,12 @@
     align-items: center;
     justify-content: center;
     line-height: 2;
+    font-family: "prompt", sans-serif;
 }
 
 .title {
     font-size: 2em;
-    font-weight: 800;
+    font-weight: 600;
     letter-spacing: 1.2px;
 }
 
@@ -20,7 +21,7 @@
 }
 
 .category{
-    font-size: 1.5em;
+    font-size: 1.1em;
     letter-spacing: 1.2px;
     font-weight: 400;
 }
@@ -31,7 +32,7 @@
     }
 
     .category{
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
 
     .bar{ 
